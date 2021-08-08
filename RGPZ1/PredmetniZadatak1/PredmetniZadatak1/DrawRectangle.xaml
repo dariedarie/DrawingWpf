@@ -1,0 +1,54 @@
+﻿<Window x:Class="PredmetniZadatak1.DrawRectangle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PredmetniZadatak1"
+        mc:Ignorable="d"
+        Title="Draw a Rectangle" Height="345.508" Width="404.115">
+    <Grid Margin="0,0,-6.333,-1.667">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="labelWidth" Grid.ColumnSpan="2" Content="Width:" HorizontalAlignment="Left" Margin="36,41,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="labelHeight" Grid.ColumnSpan="2" Content="Height:" HorizontalAlignment="Left" Margin="36,93,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelColor" Grid.ColumnSpan="2" Content="Fill color:" HorizontalAlignment="Left" Margin="36,141,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelBroder" Grid.ColumnSpan="2" Content="Fill border:" HorizontalAlignment="Left" Margin="36,187,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelThick" Grid.ColumnSpan="2" Content="Border thickness:" HorizontalAlignment="Left" Margin="36,241,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textWidth" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="26" Margin="194,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151"/>
+        <TextBox x:Name="textHeight" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="194,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151"/>
+        <Label x:Name="labelGreskaW" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Margin="168,10,0,0" VerticalAlignment="Top" Width="185"/>
+        <Label x:Name="labelGreskaH" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Margin="168,70,0,0" VerticalAlignment="Top" Width="185"/>
+        <ComboBox x:Name="cmbColor" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="194,141,0,0" VerticalAlignment="Top" Width="151">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding Name}" Width="40" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox x:Name="cmbBorder" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="194,191,0,0" VerticalAlignment="Top" Width="151">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding Name}" Width="40" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBox x:Name="textThick" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="194,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="151"/>
+        <Label x:Name="labelGreskaT" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Margin="168,214,0,0" VerticalAlignment="Top" Width="185"/>
+        <Button x:Name="btnCancel" Grid.ColumnSpan="2" Content="Cancel" HorizontalAlignment="Left" Margin="36,269,0,0" VerticalAlignment="Top" Width="100" Click="buttonCancel_Click"/>
+        <Button x:Name="btnDraw" Grid.ColumnSpan="2" Content="Draw" HorizontalAlignment="Left" Margin="194,269,0,0" VerticalAlignment="Top" Width="151" Click="buttonDraw_Click"/>
+        <Label x:Name="labelGreskaC" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Margin="194,119,0,0" VerticalAlignment="Top" Width="151"/>
+        <Label x:Name="labelGreskaB"  Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Margin="194,165,0,0" VerticalAlignment="Top" Width="151"/>
+
+
+
+    </Grid>
+</Window>
